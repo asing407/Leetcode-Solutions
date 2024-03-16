@@ -12,15 +12,16 @@ class Solution:
         
         num = 0
         
-        last = "I"
+        last ="I"
         
         for number in s[::-1]:
-            if roman_table[number] < roman_table[last]:
+            if last is None or roman_table[number] < roman_table[last]:
                 num -= roman_table[number]
             else:
                 num += roman_table[number]
                 
             last = number
+            
         return num
             
 
