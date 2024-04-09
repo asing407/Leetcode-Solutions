@@ -5,9 +5,9 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] not in ht:
                 ht[nums[i]] = 1
-                
             else:
                 ht[nums[i]] += 1
+        
         
         for i in range(len(nums)):
             if ht[nums[i]] >= 2:
