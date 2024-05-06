@@ -23,8 +23,3 @@ class Solution:
             last = number
             
         return num
-            
-
-        
-
-        
