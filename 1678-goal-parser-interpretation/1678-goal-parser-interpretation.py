@@ -4,16 +4,18 @@ class Solution:
         
         curr = 0
         
-        
-        while(curr<len(command)):
+        while (curr< len(command)):
             if command[curr] == 'G':
                 output += 'G'
-                curr += 1
-            elif command[curr + 1] == ')':
+                curr +=1
+                
+            elif command[curr+1] == ')':
                 output += 'o'
                 curr += 2
-            else:
+                
+            else :
                 output += 'al'
                 curr += 4
                 
-        return output 
+        return output
+    
