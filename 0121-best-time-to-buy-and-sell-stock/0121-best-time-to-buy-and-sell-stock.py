@@ -1,22 +1,15 @@
 class Solution:
     def maxProfit(self,prices):
-        left  = 0
-        right = 1
-        
-        
-        maxprofit = 0
-        
+        left = 0 #Buy
+        right = 1 #Sell
+        max_profit = 0
         while right < len(prices):
-            currProfit = prices[right] - prices[left]
-            
-            if prices[left] <prices[right]:
-                maxprofit = max(maxprofit, currProfit)
+            currentProfit = prices[right] - prices[left] #our current Profit
+            if prices[left] < prices[right]:
+                max_profit =max(currentProfit,max_profit)
             else:
                 left = right
-                
             right += 1
-        
-        return maxprofit
-        
+        return max_profit
     
-       
+                
