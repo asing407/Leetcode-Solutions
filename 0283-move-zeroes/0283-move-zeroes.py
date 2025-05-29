@@ -3,16 +3,15 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        zero_count = nums.count(0)
+        insert_pos = 0
+
+        for num in nums:
+            if num != 0:
+                nums[insert_pos] = num
+                insert_pos += 1
+
+        while insert_pos < len(nums):
+            nums[insert_pos] = 0
+            insert_pos += 1
         
-        next_zero = 0
-        
-        for n in nums:
-            if n != 0:
-                nums[next_zero] = n
-                next_zero +=1 
-                
-                
-        for zero in range(1, zero_count + 1):
-            nums[-zero] = 0
-                
+
