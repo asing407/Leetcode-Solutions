@@ -1,15 +1,22 @@
 class Solution:
-    def maxProfit(self,prices):
-        left = 0 #Buy
-        right = 1 #Sell
-        max_profit = 0
-        while right < len(prices):
-            currentProfit = prices[right] - prices[left] #our current Profit
-            if prices[left] < prices[right]:
-                max_profit =max(currentProfit,max_profit)
+    def maxProfit(self, prices: List[int]) -> int:
+        buy = 0
+        sell = 1
+
+        maxProfit = 0
+
+        while sell < len(prices):
+            currProfit = prices[sell] - prices[buy]
+            if prices[buy] < prices[sell]:
+                maxProfit = max(currProfit, maxProfit)
             else:
-                left = right
-            right += 1
-        return max_profit
-    
-                
+                buy = sell
+
+            sell += 1
+
+        return maxProfit
+
+
+
+
+        
