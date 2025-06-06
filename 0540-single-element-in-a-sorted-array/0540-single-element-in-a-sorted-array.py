@@ -1,19 +1,19 @@
 class Solution:
-    def singleNonDuplicate(self, arr: List[int]) -> int:
-        res = 0
+    def singleNonDuplicate(self, nums: List[int]) -> int:
 
         l = 0
-        r = len(arr) -1
+        r = len(nums) - 1
 
         while l < r:
-            mid = (l + r) //2
-            if mid % 2 == 1:
-                mid -=1
-            if arr[mid]== arr[mid + 1]:
+            mid = (l + r) // 2
+            if mid  % 2 == 1:
+                mid -= 1
+            
+            if nums[mid] == nums[mid + 1]:
                 l = mid + 2
             else:
                 r = mid
 
-        return arr[l]
+        return nums[l]
 
         
