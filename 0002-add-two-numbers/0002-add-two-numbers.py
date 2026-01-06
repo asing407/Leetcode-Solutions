@@ -5,7 +5,8 @@
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        
+        #l1 = 2,4,3 l2 = 5,6,4
+
         res = ListNode(0)
 
         ptr = res
@@ -31,4 +32,5 @@ class Solution:
             ptr = ptr.next
 
         return res.next
-       
+
+        
